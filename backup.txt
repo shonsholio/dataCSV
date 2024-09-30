@@ -53,7 +53,6 @@ controller.single = (req, res) => {
 
 * routes
 
-import multer from "multer";
 
-const upload = multer({ dest: './uploads/' });
+
 

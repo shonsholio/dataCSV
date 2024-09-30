@@ -2,11 +2,11 @@ import express from 'express'
 import bodyParser from 'body-parser';
 import path from 'path'
 import cors from 'cors'
+import dotenv from 'dotenv'
 import { router } from './routes/main.js';
 import exp from 'constants';
 
 const app = express();
-
 const _dirname = process.cwd();
 
 app.use(bodyParser.urlencoded({ extended: true }))
