@@ -2,14 +2,12 @@ import express from 'express'
 import bodyParser from 'body-parser';
 import path from 'path'
 import cors from 'cors'
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
 import { router } from './routes/main.js';
 import exp from 'constants';
 
 const app = express();
-const _filename = fileURLToPath(import.meta.url)
-const _dirname = dirname(_filename)
+
+const _dirname = process.cwd();
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())

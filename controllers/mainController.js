@@ -40,8 +40,6 @@ controller.single = (req, res) => {
     res.send('SOLO ESTA AUTORIZADO SUBIR ARCHIVOS CSV')
   }
 
-
-
 }
 
 export { controller }
