@@ -1,12 +1,7 @@
-import express from "express";
+const express = require('express')
 const router = express.Router()
-import { controller } from "../controllers/mainController.js";
-import { upload } from "../multerConfig.js";
+const controller = require('../controllers/mainController.js')
 
 router.get('/', controller.inicio)
 
-router.post('/upload', upload.single('file'), controller.single)
-
-
-
-export { router } 
+module.exports = router

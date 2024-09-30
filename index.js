@@ -1,10 +1,9 @@
-import express from 'express'
-import bodyParser from 'body-parser';
-import path from 'path'
-import cors from 'cors'
-import dotenv from 'dotenv'
-import { router } from './routes/main.js';
-import exp from 'constants';
+const express = require('express')
+const bodyParser = require('body-parser')
+const path = require('path')
+const cors = require('cors')
+const router = require('./routes/main.js')
+const exp = require('constants')
 
 const app = express();
 const _dirname = process.cwd();

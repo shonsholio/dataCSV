@@ -1,17 +1,47 @@
 <%- include('partials/_header') %>
 
- <p>ESTAMOS EN EL WORK</p><br>
- <p>funciona</p>
+  <p>ESTAMOS EN EL WORK</p><br>
+  <p>funciona</p>
 
- <form action="/upload" method="POST" enctype="multipart/form-data">
-  <input type="file" name="file" id="fileInput" >
-  <select name="periodo"> 
-    <option>Periodo</option>
-    <option value="agosto">Agosto</option>
-    <option value="septiembre">Septiembre</option>
-  </select>
-  <button type="submit" >examinar</button>
- </form>
 
-</body>
+  <table class="table" >
+
+    <tr>
+      <th>DIA DE PAGO</th>
+      <th>Anuncio</th>
+      <th>Huesped</th>
+      <th>Noches</th>
+      <th>Monto</th>
+      <th>%</th>
+
+      <th>Recibido</th>
+    </tr>
+    
+    <tr>
+      <td><%= paypal[0].fecha %></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>$ <%= cashIn.toLocaleString() %></td>
+      <td></td>
+      <td>$ <%= paypal[0].cantidad.toLocaleString() %></td>
+    </tr>
+    
+    <% for (x=0; x< pago1.length; ++x) { %>
+      <tr>
+        <td><%=pago1[x].Fecha %></td>
+        <td><%=pago1[x].Anuncio %></td>
+        <td><%=pago1[x].Huésped %></td>
+        <td><%=pago1[x].Noches %></td>
+        <td>$ <%=pago1[x].Monto.toLocaleString() %></td>
+        <td><%=porcentajes[x] %> %</td>
+        <% let payt = pagado[x].toLocaleString() %>
+        <td>$ <%=payt %></td>
+
+      <% } %>
+    </tr>
+
+  </table>
+  <p></p>
+</body> 
 </html> 
