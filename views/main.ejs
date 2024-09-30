@@ -4,25 +4,6 @@
  <p>funciona</p>
 
 
- <form action="/upload" method="POST" enctype="multipart/form-data" >
-  <input type="file" name="file" id="fileInput" >
-  <select name="periodo"> 
-    <option>Periodo</option>
-    <option value="agosto">Agosto</option>
-    <option value="septiembre">Septiembre</option>
-  </select>
-  <button type="submit" >examinar</button>
- </form>
-
- <script>
-  document.getElementById('fileInput').addEventListener('change', function() {
-      var file = this.files[0];
-      if (file && file.type === 'application/pdf') {
-          alert('Solo se permiten archivos PDF');
-          this.value = '';
-      }
-  });
-</script>
 
 </body>
 </html> 
